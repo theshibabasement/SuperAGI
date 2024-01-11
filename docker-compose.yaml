@@ -13,7 +13,7 @@ services:
   celery:
     volumes:
       - "./:/app"
-      - "$${EXTERNAL_RESOURCE_DIR:-./workspace}:/app/ext"
+      - "${EXTERNAL_RESOURCE_DIR:-./workspace}:/app/ext"
     build: .
     depends_on:
       - super__redis
